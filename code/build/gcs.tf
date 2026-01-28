@@ -10,7 +10,7 @@ resource "random_id" "rand_suffix" {
 resource "google_storage_bucket" "ejemplo" {
   name = "demo-${random_id.rand_suffix.hex}"
   location = "us-central1"
-  force-destroy = true
+  force_destroy = true
 
   uniform_bucket_level_access = false
   public_access_prevention = "enforced"
