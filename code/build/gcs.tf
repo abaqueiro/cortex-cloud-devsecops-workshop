@@ -7,7 +7,7 @@ resource "random_id" "rand_suffix" {
   byte_length = 4
 }
 
-resource "google_store_bucket" "ejemplo" {
+resource "google_storage_bucket" "ejemplo" {
   name = "demo-${random_id.rand_suffix.hex}"
   location = "us-central1"
   force-destroy = true
